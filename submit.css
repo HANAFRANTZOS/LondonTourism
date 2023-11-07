@@ -1,0 +1,130 @@
+body {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 85px 720px 150px;
+    grid-template-areas:
+        "header  "
+        "pic"
+        "foot";
+    margin: 0;
+}
+
+header {
+    grid-area: header;
+    padding: 1% 4%;
+    background: rgb(0, 13, 33);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 50px;
+    height: 50px;
+    /* border-style: solid;
+    border-color: black; */
+}
+
+.nav-links {
+    padding: 5px 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #f2f2f2;
+    padding: 5px 0;
+    position: relative;
+
+}
+
+.nav-links li a::after {
+    content: '';
+    background-color: #f2f2f2;
+    width: 0;
+    height: 1px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: width 0.6s;
+}
+
+.nav-links li a:hover::after {
+    width: 100%;
+}
+
+.btn img {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+#thank {
+    grid-area: pic;
+    background-image: url(תמונות/לונדון\ מעונן\ שחור\ לבן2.jpg);
+    background-size: cover;
+    text-align: center;
+    padding-top: 17%;
+    word-spacing: 4px;
+    letter-spacing: 1.5px;
+}
+
+#text {
+    color: #f2f2f2;
+    background-color: rgba(00, 13, 33, 0.7);
+    object-position: 0.5;
+    margin: -3% 25% 17% 25%;
+    padding: 50px;
+    box-shadow:5px 2px 35px 40px  rgb(255, 255, 255,.4);}
+
+#text h3 {
+    font-size: 40px;
+}
+
+#text h5 {
+    font-size: 18px;
+}
+footer {
+    grid-area: foot;
+    background-color: rgb(0, 13, 33);
+    color: #f2f2f2;
+    text-align: center;
+    padding: 15px;
+    margin-top: 1.5px;
+    letter-spacing: 2px;
+
+}
+
+.footText p {
+    margin: 0;
+    letter-spacing: .5px;
+}
+@media(max-width:600px) {
+    body {
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 85px 620px 150px;
+        grid-template-areas:
+            "header  "
+            "pic"
+            "foot";
+        margin: 0;
+    }
+
+    #text {
+        color: #f2f2f2;
+        background-color: rgba(00, 13, 33, 0.7);
+        object-position: 0.5;
+        margin: 0% 20% 17% 20%;
+        padding: 50px;
+        box-shadow:5px 2px 30px 30px  rgb(255, 255, 255,.4);}
+    
+}
